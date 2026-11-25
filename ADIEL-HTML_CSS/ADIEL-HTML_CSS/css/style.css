@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+:root {
+    --fundo: #F1F0E9;
+    --texto: #202020;
+    --orquidea-escura: #9932CC;
+    --roxo-medio: #9370DB;
+    --roxo-profundo: #352044;
+    --lavanda: #D8C7EA;
+    --linha: #D4D0D9;
+    --claro: #FAF9F4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.topo {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--linha);
+}
+
+.marca {
+    color: var(--texto);
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-decoration: none;
+}
+
+.marca span {
+    color: var(--roxo-medio);
+}
+
+nav {
+    display: flex;
+    gap: 34px;
+}
+
+nav a {
+    color: var(--texto);
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+.link-destaque:hover {
+    color: var(--roxo-medio);
+}
+
+.topo-legenda,
+.sobretitulo,
+.secao-indice,
+.hero-rodape,
+.imagem-numero,
+.cartao-dados span,
+footer {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.topo-legenda {
+    color: var(--roxo-medio);
+}
+
+.hero {
+    min-height: 590px;
+    padding: 70px 10% 25px;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    column-gap: 8%;
+    align-items: center;
+    position: relative;
+}
+
+.hero-texto {
+    padding-bottom: 25px;
+}
+
+.sobretitulo {
+    color: var(--orquidea-escura);
+    margin: 0 0 22px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(66px, 9vw, 126px);
+    line-height: 0.82;
+    letter-spacing: -8px;
+    font-weight: 700;
+}
+
+h1 span {
+    color: var(--roxo-medio);
+}
+
+.chamada {
+    margin: 28px 0 34px;
+    color: #65616A;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px;
+    font-style: italic;
+}
+
+.link-destaque {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--roxo-medio);
+    color: var(--texto);
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link-destaque span {
+    color: var(--roxo-medio);
+    font-size: 17px;
+}
+
+.hero-imagem {
+    position: relative;
+    height: 390px;
+    background: #DED8E5;
+    overflow: hidden;
+}
+
+.hero-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imagem-numero {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    padding: 9px 11px;
+    color: white;
+    background: rgba(32, 20, 40, 0.78);
+}
+
+.hero-rodape {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--linha);
+    color: #77717D;
+}
+
+.secao {
+    padding: 85px 10%;
+    border-top: 1px solid var(--linha);
+}
+
+.secao-indice {
+    display: flex;
+    gap: 22px;
+    color: #85808A;
+}
+
+.secao-indice span:first-child {
+    color: var(--roxo-medio);
+}
+
+.universo-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 12%;
+    margin-top: 45px;
+    align-items: start;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+}
+
+.universo h2 em {
+    color: var(--orquidea-escura);
+}
+
+.texto {
+    max-width: 470px;
+    color: #5E5963;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.texto p:first-child {
+    margin-top: 3px;
+}
+
+.texto p + p {
+    margin-top: 18px;
+}
+
+.apresentacao {
+    padding-bottom: 100px;
+}
+
+.cartao {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 38px;
+    padding: 42px;
+    overflow: hidden;
+    background: var(--roxo-profundo);
+    color: var(--claro);
+}
+
+.cartao .sobretitulo {
+    color: var(--lavanda);
+}
+
+.cartao h2 {
+    font-size: 43px;
+}
+
+.cartao-descricao {
+    max-width: 270px;
+    color: #D5C9DF;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.cartao-dados {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cartao-dados div {
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cartao-dados span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--lavanda);
+    font-size: 8px;
+}
+
+.cartao-dados strong {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.cartao-simbolo {
+    position: absolute;
+    right: 20px;
+    bottom: -65px;
+    color: rgba(255, 255, 255, 0.045);
+    font-size: 210px;
+    font-weight: 700;
+    letter-spacing: -20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 7%;
+    border-top: 1px solid var(--linha);
+    color: #77717D;
+    font-size: 8px;
+}
+
+footer b {
+    color: var(--roxo-medio);
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .topo {
+        height: 65px;
+        padding: 0 6%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .topo-legenda {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 65px 7% 25px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: clamp(68px, 18vw, 105px);
+        letter-spacing: -5px;
+    }
+
+    .hero-imagem {
+        height: 330px;
+    }
+
+    .hero-rodape {
+        margin-top: 5px;
+        font-size: 7px;
+        letter-spacing: 1px;
+        gap: 15px;
+    }
+
+    .secao {
+        padding: 65px 7%;
+    }
+
+    .universo-conteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 35px;
+    }
+
+    .cartao {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+        gap: 20px;
+    }
+
+    .cartao-dados {
+        margin-top: 10px;
+    }
+
+    footer {
+        padding: 20px 6%;
+        gap: 15px;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+}
